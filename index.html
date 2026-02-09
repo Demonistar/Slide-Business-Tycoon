@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sled Business Tycoon</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game">
+      <header>
+        <h1>Sled Business Tycoon</h1>
+        <p class="subtitle">Build your sled empire, one smooth ride at a time.</p>
+      </header>
+
+      <section class="stats">
+        <div class="stat">
+          <span class="label">Cash</span>
+          <span id="cash" class="value">$0</span>
+        </div>
+        <div class="stat">
+          <span class="label">Sleds</span>
+          <span id="sled-count" class="value">0</span>
+        </div>
+        <div class="stat">
+          <span class="label">Condition</span>
+          <span id="condition" class="value">100%</span>
+        </div>
+        <div class="stat">
+          <span class="label">Production / sec</span>
+          <span id="production" class="value">$0</span>
+        </div>
+        <div class="stat">
+          <span class="label">Electricity / sec</span>
+          <span id="electricity" class="value">$0</span>
+        </div>
+      </section>
+
+      <section class="actions">
+        <button id="sell-sled">Sell a sled (+$5)</button>
+        <button id="buy-sled">Buy sled ($50)</button>
+      </section>
+
+      <section class="log">
+        <h2>Activity</h2>
+        <p id="status">Your factory is warming up...</p>
+      </section>
+    </main>
+
+    <div id="offline-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="offline-title">
+      <div class="modal-content">
+        <h2 id="offline-title">Offline Summary</h2>
+        <p id="offline-time"></p>
+        <ul>
+          <li id="offline-money"></li>
+          <li id="offline-electricity"></li>
+          <li id="offline-condition"></li>
+        </ul>
+        <button id="close-modal">Back to business</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
